@@ -1,0 +1,50 @@
+package com.generation;
+
+import java.util.Scanner; //mandé a llamar la librería
+
+public class Codigo4 {
+	public static void main(String[] args) {	
+
+		    Scanner s = new Scanner(System.in); //Faltaba agregar el system.in
+		    //Scanner s2 = new Scanner(System.in);
+		    
+		    //Se cambio el valor de piedra, papel y tijera por números para que fuera mas sencillo.
+		    System.out.print("Turno del jugador 1 \n(introduzca el número: \n1- piedra \n2- papel \n3- tijeras \nNúmero: ");
+		    int j1 = s.nextInt();
+		    
+		    System.out.print("Turno del jugador 2 \n(introduzca el número: \n1- piedra \n2- papel \n3- tijeras \nNúmero: ");
+		    int j2 = s.nextInt();
+		    
+		    if (j1 == j2) {
+		    	System.out.println("Empate");
+		    }
+		    
+		    //corregí el switch y agregué  un if e if else para las funciones
+		      switch(j1) {
+		        case 1:
+		          if (j2 == 2) {
+		            System.out.println("Gana jugador 2, papel envuelve a piedra.");
+		          }
+		          else  if (j2 == 3) {
+			            System.out.println("Gana jugador 1, piedra rompre tijera.");
+			          }
+		          break;
+		        case 2:
+			          if (j2 == 1) {
+			            System.out.println("Gana jugador 1, papel envuelve a piedra.");
+			          }
+			          else  if (j2 == 3) {
+				            System.out.println("Gana jugador 2, tijera rompe papel.");
+				          }
+			          break;
+		        case 3:
+		        	if(j2 == 1) {
+		        		System.out.println("Gana el jugador 2, piedra rompe tijera.");
+		        	}
+		        	else  if (j2 == 2) {
+			            System.out.println("Gana jugador 1, tijera corta papel.");
+			          }
+		          break;
+		    }
+	}
+}
